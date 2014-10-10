@@ -1,6 +1,6 @@
 terraform-mesos
 =========
-A repo to test a 3 node coreos cluster on AWS
+A repo to test 1 mesos master and 1 mesos slave on AWS.
 
 # Prereqs
 ## Basic stuff
