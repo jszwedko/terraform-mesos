@@ -16,7 +16,7 @@ resource "aws_security_group" "mesos-sg" {
   }
   ingress {
     from_port = 5051
-    to_port = 5050
+    to_port = 5051
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
