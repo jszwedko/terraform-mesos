@@ -18,6 +18,11 @@ variable "key_file" {
   description = "Path to AWS private key"
 }
 
+variable "num_slaves" {
+  description = "Number of slaves to spin up"
+  default = 3
+}
+
 variable "amis" {
     default = {
         us-east-1 = "ami-4c7a3924"
