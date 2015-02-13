@@ -1,13 +1,22 @@
-variable "access_key" {}
-variable "secret_key" {}
-variable "region" {}
-variable "key_name" {}
-variable "key_file" {}
-variable "zone_id" {}
-variable "mesos_dns" {}
+variable "access_key" {
+  description = "AWS access key"
+}
 
-# Official Ubuntu Cloud Images
-# https://cloud-images.ubuntu.com/trusty/current/
+variable "secret_key" {
+  description = "AWS secret key"
+}
+
+variable "region" {
+  description = "AWS Region"
+}
+
+variable "key_name" {
+  description = "Name of AWS key pair"
+}
+
+variable "key_file" {
+  description = "Path to AWS private key"
+}
 
 variable "amis" {
     default = {
