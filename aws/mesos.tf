@@ -60,7 +60,7 @@ output "mesos-ui" {
 resource "aws_instance" "mesos-slave" {
   instance_type = "m1.medium"
   ami = "${lookup(var.amis, var.region)}"
-  count = 1
+  count = 3
   key_name = "${var.key_name}"
   security_groups = ["${aws_security_group.mesos-sg.name}"]
   connection {
