@@ -6,7 +6,6 @@ A repo to test 1 mesos master and n mesos slave on AWS.
 ## Basic stuff
 - AWS access and secret keys
 - [Terraform](http://terraform.io)
-- ZoneID for Route53
 
 ## Things you need to do
 - Copy ```terraform.tfvars.example``` to ```terraform.tfvars``` and replace the values (or supply ```-var``` in your command line)
