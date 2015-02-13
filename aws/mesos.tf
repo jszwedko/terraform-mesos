@@ -53,12 +53,8 @@ resource "aws_instance" "mesos-master" {
   }
 }
 
-resource "aws_route53_record" "mesos-master" {
-   zone_id = "${var.zone_id}"
-   name = "${var.mesos_dns}"
-   type = "A"
-   ttl = "300"
-   records = ["${aws_instance.mesos-master.public_ip}"]
+output "mesos-ui" {
+  value = "http://${aws_instance.mesos-master.public_ip}:5050"
 }
 
 resource "aws_instance" "mesos-slave" {
@@ -84,4 +80,6 @@ resource "aws_instance" "mesos-slave" {
   }
 }
 
-
+output "mesos-slave-ips" {
+  value = "${join(", ", aws_instance.mesos-slave.*.public_ip)}"
+}
