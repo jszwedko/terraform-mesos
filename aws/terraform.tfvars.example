@@ -3,5 +3,4 @@ secret_key = "aws_secret_key_jkfldajskfja;klkfjdsa"
 region = "us-west-2"
 key_name = "your-key-name"
 key_file = "some/path/to/file.pem"
-zone_id = "FAKEZONEID"
-mesos_dns = "mesos.example.com"
+num_slaves = 3
