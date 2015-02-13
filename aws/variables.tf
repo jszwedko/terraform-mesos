@@ -11,8 +11,8 @@ variable "mesos_dns" {}
 
 variable "amis" {
     default = {
-        us-east-1 = "ami-9415a7fc"
-        us-west-2 = "ami-65753855"
-        us-west-1 = "ami-1948425c"
+        us-east-1 = "ami-4c7a3924"
+        us-west-2 = "ami-17471c27"
+        us-west-1 = "ami-84bba3c1"
     }
 }

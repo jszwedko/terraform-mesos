@@ -36,7 +36,7 @@ resource "aws_security_group" "mesos-sg" {
 }
 
 resource "aws_instance" "mesos-master" {
-  instance_type = "m3.medium"
+  instance_type = "m1.medium"
   ami = "${lookup(var.amis, var.region)}"
   count = 1
   key_name = "${var.key_name}"
@@ -62,7 +62,7 @@ resource "aws_route53_record" "mesos-master" {
 }
 
 resource "aws_instance" "mesos-slave" {
-  instance_type = "m3.medium"
+  instance_type = "m1.medium"
   ami = "${lookup(var.amis, var.region)}"
   count = 1
   key_name = "${var.key_name}"
