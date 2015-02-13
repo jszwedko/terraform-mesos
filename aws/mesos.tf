@@ -57,6 +57,10 @@ output "mesos-ui" {
   value = "http://${aws_instance.mesos-master.public_ip}:5050"
 }
 
+output "marathon-ui" {
+  value = "http://${aws_instance.mesos-master.public_ip}:8080"
+}
+
 resource "aws_instance" "mesos-slave" {
   instance_type = "m1.medium"
   ami = "${lookup(var.amis, var.region)}"
